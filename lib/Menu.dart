@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 import 'package:animacoes/AnimacaoImplicita.dart';
 import 'package:animacoes/AnimacaoTween.dart';
+import 'package:animacoes/AnimacoesExplicitasConstruidas.dart';
 import 'package:animacoes/BotaoAnimado.dart';
 import 'package:animacoes/CriandoAnimacoesBasicas.dart';
 import 'package:flutter/material.dart';
@@ -58,6 +59,17 @@ class _MenuState extends State<Menu> {
               context,
               MaterialPageRoute(
                 builder: (context) => const AnimacaoTween(),
+              ),
+            );
+          },
+        ),
+        ElevatedButton(
+          child: const Text("Animacoes Explicitas Construidas"),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const AnimacoesExplicitasConstruidas(),
               ),
             );
           },
