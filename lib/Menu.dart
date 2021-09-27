@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 import 'package:animacoes/AnimacaoImplicita.dart';
+import 'package:animacoes/AnimacaoTween.dart';
 import 'package:animacoes/BotaoAnimado.dart';
 import 'package:animacoes/CriandoAnimacoesBasicas.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class _MenuState extends State<Menu> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ElevatedButton(
+          child: const Text("Animacao Implícita"),
           onPressed: () {
             Navigator.push(
               context,
@@ -26,9 +28,9 @@ class _MenuState extends State<Menu> {
               ),
             );
           },
-          child: const Text("Animacao Implícita"),
         ),
         ElevatedButton(
+          child: const Text("Animacoes Basicas"),
           onPressed: () {
             Navigator.push(
               context,
@@ -37,9 +39,9 @@ class _MenuState extends State<Menu> {
               ),
             );
           },
-          child: const Text("Animacoes Basicas"),
         ),
         ElevatedButton(
+          child: const Text("Botao Animado"),
           onPressed: () {
             Navigator.push(
               context,
@@ -48,7 +50,17 @@ class _MenuState extends State<Menu> {
               ),
             );
           },
-          child: const Text("Botao Animado"),
+        ),
+        ElevatedButton(
+          child: const Text("Animacao Tween"),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const AnimacaoTween(),
+              ),
+            );
+          },
         ),
       ],
     );
