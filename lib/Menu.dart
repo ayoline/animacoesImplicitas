@@ -4,6 +4,7 @@ import 'package:animacoes/AnimacaoTween.dart';
 import 'package:animacoes/AnimacoesExplicitasConstruidas.dart';
 import 'package:animacoes/BotaoAnimado.dart';
 import 'package:animacoes/CriandoAnimacoesBasicas.dart';
+import 'package:animacoes/MaisSobreAnimacoes.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatefulWidget {
@@ -70,6 +71,17 @@ class _MenuState extends State<Menu> {
               context,
               MaterialPageRoute(
                 builder: (context) => const AnimacoesExplicitasConstruidas(),
+              ),
+            );
+          },
+        ),
+        ElevatedButton(
+          child: const Text("Mais sobre Animacoes"),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const MaisSobreAnimacoes(),
               ),
             );
           },
